@@ -255,7 +255,16 @@ Bốn ảnh dưới đây đã được mở và kiểm tra trực tiếp. Học
 - `screenshots/jaeger-error-trace.png`
 - `screenshots/prometheus-alert-firing.png`
 
-Ảnh Prometheus INACTIVE ban đầu được giữ ở [bản gốc](screenshots/original/prometheus-alert-inactive-user.png). Ảnh nộp chính hiện thấy cả `AgentHighErrorRate` và `AgentHighLatencyP95` FIRING. [Kết quả kiểm ảnh và SHA-256](reports/evidence/screenshot-review.json) ghi rõ nội dung từng ảnh. Traffic dùng chụp alert được tách khỏi hai lượt scaling chính thức.
+AI log, Copilot tiếp quản
+Kiểm tra cấu trúc nộp bài, 10 file JSON, hai CSV scaling, bốn ảnh CP8 và các thay đổi chưa commit. Không chạy lại benchmark chính thức hoặc grader CP5.
+Đối chiếu tên rule và ngưỡng alert từ alert_rules.yml; sửa các ngưỡng, trace ID, thời lượng và nhận định scaling trong báo cáo theo bằng chứng có sẵn.
+Xác nhận bốn ảnh CP8 hiện tại bị crop và chưa dùng được. Không tạo ảnh thay thế, không dừng Docker stack, không commit, push hoặc merge khi còn thiếu bằng chứng.
+Ghi chú lịch sử: kết luận ảnh bị crop ở lượt Copilot trước đã được thay thế bởi kiểm tra trực tiếp các ảnh học viên chụp mới trong phiên final audit bên dưới. Giữ nguyên log trước để không sửa lịch sử hỗ trợ AI.
 
-
+AI log, Codex final audit ngày 2026-11-26
+Yêu cầu: đối chiếu CP0–CP8, hoàn thiện bằng chứng còn thiếu và chỉ commit/push/merge khi đủ điều kiện.
+Codex đọc yêu cầu chính thức, diff và dữ liệu gốc; giữ nguyên code CP5 đã đạt grader, grader và golden dataset. Không chạy lại benchmark scaling hoặc CP7 đã có bằng chứng hợp lệ.
+Bổ sung output CP3 bằng process WSL riêng, Histogram Exercise 7.1 và kiểm thử HTTP, JSON trace/log, kiểm chứng cloud, số liệu report và bảng tự đánh giá. Các script trong utils/ và bằng chứng trong reports/evidence/ cho phép kiểm tra lại.
+Học viên trực tiếp chụp bốn screenshots CP8. Codex phát hiện ảnh alert đầu hiển thị INACTIVE; học viên đã chụp lại ảnh hai alert FIRING. Codex chỉ đọc ảnh, không chỉnh nội dung ảnh. Computer Use bị chặn do không xác định được URL, nên không dùng công cụ đó để chụp thay.
+Các hành động Git, cấu hình Docker, kết quả kiểm tra và phần cần Lab Coach xác nhận được ghi ở Final audit. Không đưa token, API key thực tế hoặc Redis credentials vào hồ sơ.
 
