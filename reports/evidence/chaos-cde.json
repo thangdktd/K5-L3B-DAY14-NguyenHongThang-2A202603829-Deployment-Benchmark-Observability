@@ -1,0 +1,762 @@
+{
+  "started_at": "2026-11-26T15:32:06.948638+00:00",
+  "purpose": "chaos experiments C/D/E, not scaling benchmark",
+  "C": {
+    "change_started_at": "2026-11-26T15:32:06.948676+00:00",
+    "config": {
+      "MOCK_ERROR_RATE": "0.01",
+      "MOCK_SLOW_RATE": "0.03",
+      "AGENT_VERSION": "v2",
+      "LLM_MODEL": "mock-llm-large"
+    },
+    "ended_at": "2026-11-26T15:36:01.261892+00:00",
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "Tốc độ chi tiêu hiện tại: $43.04/giờ",
+          "summary": "Chi phí LLM đang vượt $2/giờ"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-26T15:32:37.571501534Z",
+        "value": "4.304239237332574e+01"
+      }
+    ]
+  },
+  "D": {
+    "change_started_at": "2026-11-26T15:36:01.316482+00:00",
+    "observations": [
+      {
+        "observed_at": "2026-11-26T15:36:02.714655+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $43.04/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.304239237332574e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:07.721416+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.06/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.406364808824238e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:12.748606+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.07/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.407467988837267e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:17.755299+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.07/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.4069215425648345e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:22.765123+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.06/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.4063892832007845e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:27.782053+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.06/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.405899926240514e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:32.794231+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.05/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.405421723132151e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:37.808543+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.05/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.404953982734613e+01"
+          },
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:42.816129+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "pending",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.05/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.4045238728760914e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:47.837466+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.04/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.404101883471228e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:52.843404+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.04/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.403696442800272e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:36:57.860397+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.03/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.40330659612123e+01"
+          },
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:37:02.879454+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.03/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.402700303574756e+01"
+          },
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:37:07.895009+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.03/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.4025618170629755e+01"
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-11-26T15:37:12.911010+00:00",
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "AgentInstanceDown",
+              "instance": "172.20.0.5:8000",
+              "job": "agent",
+              "severity": "critical"
+            },
+            "annotations": {
+              "description": "Prometheus không gọi được /metrics của 172.20.0.5:8000 trong 30s",
+              "summary": "Instance agent 172.20.0.5:8000 không scrape được"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:36:12.401817116Z",
+            "value": "0e+00"
+          },
+          {
+            "labels": {
+              "alertname": "LLMCostBurnRateHigh",
+              "severity": "warning"
+            },
+            "annotations": {
+              "description": "Tốc độ chi tiêu hiện tại: $44.02/giờ",
+              "summary": "Chi phí LLM đang vượt $2/giờ"
+            },
+            "state": "firing",
+            "activeAt": "2026-11-26T15:32:37.571501534Z",
+            "value": "4.4022138658770764e+01"
+          }
+        ]
+      }
+    ],
+    "ended_at": "2026-11-26T15:37:18.090535+00:00"
+  },
+  "E": {
+    "change_started_at": "2026-11-26T15:37:18.090577+00:00",
+    "config": {
+      "MOCK_ERROR_RATE": "0",
+      "MOCK_SLOW_RATE": "0",
+      "AGENT_VERSION": "v1",
+      "LLM_MODEL": "mock-llm-small"
+    },
+    "results": [
+      {
+        "id": "basic-01",
+        "passed": true,
+        "missing_keywords": [],
+        "agent_version": "v1",
+        "trace_id": "735f3a6216b025344905848c52740656"
+      },
+      {
+        "id": "docker-01",
+        "passed": false,
+        "missing_keywords": [
+          "dependencies",
+          "môi trường"
+        ],
+        "agent_version": "v1",
+        "trace_id": "c8268e2d0bd084acf7ea4c64e70a30ae"
+      },
+      {
+        "id": "docker-02",
+        "passed": false,
+        "missing_keywords": [
+          "builder",
+          "runtime",
+          "nhỏ hơn"
+        ],
+        "agent_version": "v1",
+        "trace_id": "1c226b7913e9edb1d484bb9b35e4afab"
+      },
+      {
+        "id": "probe-01",
+        "passed": false,
+        "missing_keywords": [
+          "còn sống",
+          "restart"
+        ],
+        "agent_version": "v1",
+        "trace_id": "645999dda1e742878286fa3a71252867"
+      },
+      {
+        "id": "probe-02",
+        "passed": false,
+        "missing_keywords": [
+          "load balancer",
+          "traffic",
+          "không restart"
+        ],
+        "agent_version": "v1",
+        "trace_id": "8a65e5607bbaeccc945a06429db61f6e"
+      },
+      {
+        "id": "reliability-01",
+        "passed": false,
+        "missing_keywords": [
+          "sigterm",
+          "in-flight",
+          "request mới"
+        ],
+        "agent_version": "v1",
+        "trace_id": "f21c69895cd4173d8401a2f8528e39f9"
+      },
+      {
+        "id": "config-01",
+        "passed": false,
+        "missing_keywords": [
+          "biến môi trường",
+          "hardcode"
+        ],
+        "agent_version": "v1",
+        "trace_id": "a01d2377ec397e48b3bdc932998ee5ff"
+      },
+      {
+        "id": "security-01",
+        "passed": false,
+        "missing_keywords": [
+          "429",
+          "retry-after"
+        ],
+        "agent_version": "v1",
+        "trace_id": "e16616663db5d04b2ddd267211c958e9"
+      },
+      {
+        "id": "security-02",
+        "passed": false,
+        "missing_keywords": [
+          "token",
+          "hết hạn",
+          "chữ ký"
+        ],
+        "agent_version": "v1",
+        "trace_id": "aae7f135431caf473a417024a6005147"
+      },
+      {
+        "id": "scaling-01",
+        "passed": false,
+        "missing_keywords": [
+          "redis",
+          "session",
+          "load balancer"
+        ],
+        "agent_version": "v1",
+        "trace_id": "363cba086bcf8015d0be16390d40f831"
+      },
+      {
+        "id": "scaling-02",
+        "passed": false,
+        "missing_keywords": [
+          "round-robin",
+          "instance"
+        ],
+        "agent_version": "v1",
+        "trace_id": "44bcd415778a616cccb6a57beb751817"
+      },
+      {
+        "id": "scaling-03",
+        "passed": false,
+        "missing_keywords": [
+          "cpu",
+          "memory",
+          "custom metrics"
+        ],
+        "agent_version": "v1",
+        "trace_id": "1ee4c4083db563eb74174648117b9c5c"
+      },
+      {
+        "id": "bench-01",
+        "passed": false,
+        "missing_keywords": [
+          "95%",
+          "tail latency",
+          "p99"
+        ],
+        "agent_version": "v1",
+        "trace_id": "c7f42a5233921c55c71b864681afd555"
+      },
+      {
+        "id": "bench-02",
+        "passed": false,
+        "missing_keywords": [
+          "đáp án",
+          "regression"
+        ],
+        "agent_version": "v1",
+        "trace_id": "696afbbf749b33862cc5747903cf3e21"
+      },
+      {
+        "id": "obs-01",
+        "passed": false,
+        "missing_keywords": [
+          "pull",
+          "scrape",
+          "/metrics"
+        ],
+        "agent_version": "v1",
+        "trace_id": "43e4b22f2a1543e09aedf374762a9644"
+      },
+      {
+        "id": "obs-02",
+        "passed": false,
+        "missing_keywords": [
+          "chỉ tăng",
+          "lên xuống",
+          "bucket"
+        ],
+        "agent_version": "v1",
+        "trace_id": "f6d97ed5e5406f80cc7a0a30bebc5007"
+      },
+      {
+        "id": "obs-03",
+        "passed": false,
+        "missing_keywords": [
+          "time series",
+          "ram"
+        ],
+        "agent_version": "v1",
+        "trace_id": "0a8ddfb5c49be35a418b533b7f2b80c4"
+      },
+      {
+        "id": "obs-04",
+        "passed": false,
+        "missing_keywords": [
+          "span",
+          "attributes",
+          "thời gian"
+        ],
+        "agent_version": "v1",
+        "trace_id": "a55cb6ccd1ce3032de9b97d17f37303d"
+      },
+      {
+        "id": "obs-05",
+        "passed": false,
+        "missing_keywords": [
+          "trace",
+          "jaeger"
+        ],
+        "agent_version": "v1",
+        "trace_id": "140ce5054f548ad2b8afb1b7b70d6dab"
+      },
+      {
+        "id": "obs-06",
+        "passed": false,
+        "missing_keywords": [
+          "request_id",
+          "trace_id",
+          "lọc"
+        ],
+        "agent_version": "v1",
+        "trace_id": "f5f4da5dc7e9f9f0c08e76c2f412f758"
+      },
+      {
+        "id": "slo-01",
+        "passed": false,
+        "missing_keywords": [
+          "sli",
+          "100%"
+        ],
+        "agent_version": "v1",
+        "trace_id": "a07db0e6eba3c53df057644f73f373cd"
+      },
+      {
+        "id": "cost-01",
+        "passed": false,
+        "missing_keywords": [
+          "token",
+          "input",
+          "output"
+        ],
+        "agent_version": "v1",
+        "trace_id": "64edcdfa8d3a79037ff89f4d13716934"
+      },
+      {
+        "id": "cloud-01",
+        "passed": false,
+        "missing_keywords": [
+          "container",
+          "tự scale",
+          "https"
+        ],
+        "agent_version": "v1",
+        "trace_id": "5c219f038dc3b0cdac3498c915e20142"
+      }
+    ],
+    "ended_at": "2026-11-26T15:37:40.677451+00:00",
+    "passed": 1,
+    "total": 23,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "Tốc độ chi tiêu hiện tại: $42.19/giờ",
+          "summary": "Chi phí LLM đang vượt $2/giờ"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-26T15:32:37.571501534Z",
+        "value": "4.219091631694808e+01"
+      }
+    ]
+  },
+  "restoration_started_at": "2026-11-26T15:37:40.706062+00:00",
+  "restored_config": {
+    "MOCK_ERROR_RATE": "0.01",
+    "MOCK_SLOW_RATE": "0.03",
+    "AGENT_VERSION": "v2",
+    "LLM_MODEL": "mock-llm-small"
+  },
+  "ended_at": "2026-11-26T15:38:00.146034+00:00"
+}

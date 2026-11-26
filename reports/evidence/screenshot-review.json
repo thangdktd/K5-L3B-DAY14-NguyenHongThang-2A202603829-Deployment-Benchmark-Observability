@@ -1,0 +1,44 @@
+{
+  "dashboard.png": {
+    "sha256": "9406b299106eb71ae4573b456aa928257320c8a841cd14afc502d934e3be28ef",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Render Free service Live, deployed commit 4617c63, correct public URL."
+  },
+  "running.png": {
+    "sha256": "028163e2ea4881a16d43c09e0fb353c88764ed8b36a9698d5bfb6784f2e61252",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Render application startup logs and service live URL."
+  },
+  "test.png": {
+    "sha256": "fb9ddd683fd8734cecef65b743bccf3d0d008ff71d8e103a2bcdf72301db7ae0",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Four cloud checks visibly return 200, 200, 401, 200; key value redacted by student."
+  },
+  "grafana-dashboard.png": {
+    "sha256": "2d1a26ae083f001a00da3da72c397b7630dff9533e57bbde8d5ccfb320878b17",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Day 14 AI Agent Overview; Golden Signals, p95 1.90 s, 2 instances, current traffic 0.0 req/s and error 0.00%; historical latency/traffic curves show earlier load."
+  },
+  "jaeger-slow-trace.png": {
+    "sha256": "0a83bea9ed136a29d066d725cc0fcb7c6231f975c341a7c4d044f00cfc79e1ec",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Trace f97793940f004263c4db7441e264b065, duration 3.2 s, 4 spans, HTTP 200, agent.run 485 ms."
+  },
+  "jaeger-error-trace.png": {
+    "sha256": "d12f578b5679084198921b60176ff31fdefac2f06744cf617f403bda3e316bcf",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Trace c34cb9ba78a06c551110b3357b8eac11, duration 97.9 ms, 4 spans, HTTP 503 and error markers. Exception event confirmed separately in trace JSON."
+  },
+  "prometheus-alert-firing.png": {
+    "sha256": "e0bee663ec8631fffe02a547def903cedba4e2ee16b03035ecfdcdc5660e6f82",
+    "visual_review": "PASS",
+    "provenance": "student screenshot; directly inspected by Codex",
+    "observed_content": "Student recaptured during audit: AgentHighErrorRate and AgentHighLatencyP95 visibly FIRING, agent-slo FIRING (2)."
+  }
+}

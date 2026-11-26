@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-11-26T15:38:45.374810+00:00",
+  "grader_result_source": "MISSION_ANSWERS.md Part 6, recorded at commit 4617c63",
+  "result": "PASS 12/12; 41/41 checks passed (reuse previous full Docker + WSL grader run)",
+  "grader_rerun": false,
+  "protected_files": {
+    "06-lab-complete/check_production_ready.py": {
+      "working_tree_sha256": "73e4a70c13ba1127ffd7fafe14d2b9f6ce6ec016dccafd8ca3d416cf8817268a",
+      "git_blob": "24d7f905fba9010e9c225d4fe98a23e3848cc40a",
+      "matches_origin_main_after_git_eol_filters": true
+    },
+    "06-lab-complete/benchmark-observability/develop/eval/golden_dataset.jsonl": {
+      "working_tree_sha256": "22e672344ef72779959f3cf480391cef247b2f8ce86415010ddea9b315e959ec",
+      "git_blob": "ea122a55496123c6ce4242d6b78306ed5e51f709",
+      "matches_origin_main_after_git_eol_filters": true
+    }
+  },
+  "cp5_runtime_paths_unchanged_since_4617c63": [
+    "06-lab-complete/app",
+    "06-lab-complete/utils",
+    "06-lab-complete/Dockerfile",
+    "06-lab-complete/requirements.txt",
+    "06-lab-complete/docker-compose.yml",
+    "06-lab-complete/railway.toml"
+  ]
+}
