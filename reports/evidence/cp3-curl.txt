@@ -1,0 +1,49 @@
+WSL runtime: posix; Python 3.14.4
+Source: 04-api-gateway/production; isolated single-worker uvicorn
+Base URL: http://127.0.0.1:59561
+
+$ curl -i -X POST $BASE/ask -H 'Content-Type: application/json' -d '<question JSON>'
+HTTP/1.1 401 Unauthorized
+date: Thu, 26 Nov 2026 15:25:51 GMT
+server: uvicorn
+www-authenticate: Bearer
+content-length: 76
+content-type: application/json
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+
+{"detail":"Authentication required. Include: Authorization: Bearer <token>"}
+
+$ curl -i -X POST $BASE/ask -H 'Authorization: Bearer <REDACTED>' -H 'Content-Type: application/json' -d '<question JSON>' # authenticated request 1
+HTTP/1.1 200 OK
+date: Thu, 26 Nov 2026 15:26:19 GMT
+server: uvicorn
+content-length: 204
+content-type: application/json
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+
+{"question":"Docker container la gi?","answer":"Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!","usage":{"requests_remaining":9,"budget_remaining_usd":1.9e-05}}
+
+$ curl -i -X POST $BASE/ask -H 'Authorization: Bearer <REDACTED>' -H 'Content-Type: application/json' -d '<question JSON>' # authenticated request 11
+HTTP/1.1 429 Too Many Requests
+date: Thu, 26 Nov 2026 15:26:20 GMT
+server: uvicorn
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 1795706842
+retry-after: 59
+content-length: 98
+content-type: application/json
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+
+{"detail":{"error":"Rate limit exceeded","limit":10,"window_seconds":60,"retry_after_seconds":59}}
+Authenticated HTTP sequence: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 429]
+Isolated CP3 process stopped: pid=3656, exit_code=-15

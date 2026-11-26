@@ -1,0 +1,18 @@
+GET /metrics after POST /ask {question: Docker?} and two unknown routes
+# TYPE http_requests_total counter
+http_requests_total{method="POST",route="/ask",status="200"} 1.0
+http_requests_total{method="GET",route="unmatched",status="404"} 2.0
+# TYPE agent_question_length_chars histogram
+agent_question_length_chars_bucket{le="20.0"} 1.0
+agent_question_length_chars_bucket{le="50.0"} 1.0
+agent_question_length_chars_bucket{le="100.0"} 1.0
+agent_question_length_chars_bucket{le="200.0"} 1.0
+agent_question_length_chars_bucket{le="500.0"} 1.0
+agent_question_length_chars_bucket{le="1000.0"} 1.0
+agent_question_length_chars_bucket{le="2000.0"} 1.0
+agent_question_length_chars_bucket{le="+Inf"} 1.0
+agent_question_length_chars_count 1.0
+agent_question_length_chars_sum 7.0
+# TYPE agent_in_flight_requests gauge
+agent_in_flight_requests 0.0
+PASS: histogram count=1, sum=7; unknown paths share unmatched label.

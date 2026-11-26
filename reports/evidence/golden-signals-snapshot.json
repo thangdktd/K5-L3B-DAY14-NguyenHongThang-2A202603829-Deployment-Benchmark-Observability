@@ -1,0 +1,121 @@
+{
+  "captured_at": "2026-11-26T15:31:29.032199+00:00",
+  "queries": {
+    "p95": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1795707089.128,
+              "1.9039483416848064"
+            ]
+          }
+        ]
+      }
+    },
+    "avg": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1795707089.139,
+              "0.6221962701709508"
+            ]
+          }
+        ]
+      }
+    },
+    "per_instance_rps": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "instance": "172.20.0.5:8000"
+            },
+            "value": [
+              1795707089.147,
+              "4.654460827984946"
+            ]
+          },
+          {
+            "metric": {
+              "instance": "172.20.0.8:8000"
+            },
+            "value": [
+              1795707089.147,
+              "4.6344256038383955"
+            ]
+          }
+        ]
+      }
+    },
+    "tokens_per_second": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "type": "input"
+            },
+            "value": [
+              1795707089.16,
+              "532.6851079027474"
+            ]
+          },
+          {
+            "metric": {
+              "type": "output"
+            },
+            "value": [
+              1795707089.16,
+              "295.9361710570819"
+            ]
+          }
+        ]
+      }
+    },
+    "up": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "__name__": "up",
+              "instance": "172.20.0.5:8000",
+              "job": "agent"
+            },
+            "value": [
+              1795707089.178,
+              "1"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "up",
+              "instance": "172.20.0.8:8000",
+              "job": "agent"
+            },
+            "value": [
+              1795707089.178,
+              "1"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "public_metrics": {
+    "status": 404,
+    "body": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.28.3</center>\r\n</body>\r\n</html>\r\n"
+  }
+}

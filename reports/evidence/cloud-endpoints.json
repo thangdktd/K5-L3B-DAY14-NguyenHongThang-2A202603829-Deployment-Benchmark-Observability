@@ -1,0 +1,23 @@
+[
+  {
+    "checked_at": "2026-11-26T15:24:21.158063+00:00",
+    "method": "GET",
+    "url": "https://k5-l3b-day14-nguyenhongthang-2a202603829.onrender.com/health",
+    "status": 200,
+    "body": "{\"status\":\"ok\"}"
+  },
+  {
+    "checked_at": "2026-11-26T15:24:21.623184+00:00",
+    "method": "GET",
+    "url": "https://k5-l3b-day14-nguyenhongthang-2a202603829.onrender.com/ready",
+    "status": 200,
+    "body": "{\"status\":\"ready\",\"redis\":true}"
+  },
+  {
+    "checked_at": "2026-11-26T15:24:21.802708+00:00",
+    "method": "POST",
+    "url": "https://k5-l3b-day14-nguyenhongthang-2a202603829.onrender.com/ask",
+    "status": 401,
+    "body": "{\"detail\":\"Invalid or missing API key\"}"
+  }
+]

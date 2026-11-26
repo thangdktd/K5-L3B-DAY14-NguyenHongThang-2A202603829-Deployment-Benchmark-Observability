@@ -1,0 +1,198 @@
+{
+  "checked_at": "2026-11-26T15:46:50.021904+00:00",
+  "status": "PASS",
+  "cp7_json_count": 10,
+  "cp5": "Reuse PASS 12/12 at 4617c63; source unchanged",
+  "protected_files_unchanged": true,
+  "loads": {
+    "load_v2_c1.json": {
+      "total_requests": 300,
+      "rps": 3.7,
+      "error_rate": 0.0033,
+      "latency_ms": {
+        "min": 169.3,
+        "avg": 270.7,
+        "p50": 208.7,
+        "p90": 240.1,
+        "p95": 248.3,
+        "p99": 1723.6,
+        "max": 1741.8
+      }
+    },
+    "load_v2_c10.json": {
+      "total_requests": 300,
+      "rps": 42.4,
+      "error_rate": 0.0033,
+      "latency_ms": {
+        "min": 164.2,
+        "avg": 233.4,
+        "p50": 213.4,
+        "p90": 262.6,
+        "p95": 292.8,
+        "p99": 446.6,
+        "max": 1738.1
+      }
+    },
+    "load_v2_c100.json": {
+      "total_requests": 300,
+      "rps": 32.91,
+      "error_rate": 0.0067,
+      "latency_ms": {
+        "min": 310.5,
+        "avg": 2271.9,
+        "p50": 1906.1,
+        "p90": 4952.0,
+        "p95": 5889.7,
+        "p99": 6903.4,
+        "max": 7525.5
+      }
+    },
+    "load_v2_c50.json": {
+      "total_requests": 300,
+      "rps": 32.59,
+      "error_rate": 0.0033,
+      "latency_ms": {
+        "min": 232.7,
+        "avg": 1232.7,
+        "p50": 506.0,
+        "p90": 3283.0,
+        "p95": 4686.3,
+        "p99": 6679.1,
+        "max": 7271.0
+      }
+    },
+    "load_v2_slow_0.03.json": {
+      "total_requests": 300,
+      "rps": 52.01,
+      "error_rate": 0.0033,
+      "latency_ms": {
+        "min": 160.7,
+        "avg": 290.2,
+        "p50": 212.5,
+        "p90": 349.4,
+        "p95": 437.1,
+        "p99": 1730.6,
+        "max": 1768.1
+      }
+    },
+    "load_v2_slow_0.1.json": {
+      "total_requests": 300,
+      "rps": 45.7,
+      "error_rate": 0.0067,
+      "latency_ms": {
+        "min": 165.0,
+        "avg": 358.8,
+        "p50": 218.2,
+        "p90": 460.6,
+        "p95": 1698.9,
+        "p99": 1726.8,
+        "max": 1770.4
+      }
+    },
+    "load_v2_slow_0.json": {
+      "total_requests": 300,
+      "rps": 88.27,
+      "error_rate": 0.0067,
+      "latency_ms": {
+        "min": 165.3,
+        "avg": 219.3,
+        "p50": 212.6,
+        "p90": 268.3,
+        "p95": 307.6,
+        "p99": 344.3,
+        "max": 360.5
+      }
+    }
+  },
+  "scaling": {
+    "1": {
+      "Request Count": "7041",
+      "Failure Count": "281",
+      "Requests/s": "59.128930258060294",
+      "50%": "210",
+      "95%": "1700",
+      "99%": "2900"
+    },
+    "3": {
+      "Request Count": "7600",
+      "Failure Count": "69",
+      "Requests/s": "63.9195197629533",
+      "50%": "200",
+      "95%": "710",
+      "99%": "1700"
+    }
+  },
+  "screenshots": {
+    "dashboard.png": {
+      "dimensions": [
+        1024,
+        575
+      ],
+      "sha256": "9406b299106eb71ae4573b456aa928257320c8a841cd14afc502d934e3be28ef",
+      "actual_format": "JPEG"
+    },
+    "running.png": {
+      "dimensions": [
+        1024,
+        575
+      ],
+      "sha256": "028163e2ea4881a16d43c09e0fb353c88764ed8b36a9698d5bfb6784f2e61252",
+      "actual_format": "JPEG"
+    },
+    "test.png": {
+      "dimensions": [
+        1024,
+        575
+      ],
+      "sha256": "fb9ddd683fd8734cecef65b743bccf3d0d008ff71d8e103a2bcdf72301db7ae0",
+      "actual_format": "PNG"
+    },
+    "grafana-dashboard.png": {
+      "dimensions": [
+        1366,
+        768
+      ],
+      "sha256": "2d1a26ae083f001a00da3da72c397b7630dff9533e57bbde8d5ccfb320878b17",
+      "actual_format": "PNG"
+    },
+    "jaeger-slow-trace.png": {
+      "dimensions": [
+        1366,
+        768
+      ],
+      "sha256": "0a83bea9ed136a29d066d725cc0fcb7c6231f975c341a7c4d044f00cfc79e1ec",
+      "actual_format": "PNG"
+    },
+    "jaeger-error-trace.png": {
+      "dimensions": [
+        1366,
+        768
+      ],
+      "sha256": "d12f578b5679084198921b60176ff31fdefac2f06744cf617f403bda3e316bcf",
+      "actual_format": "PNG"
+    },
+    "prometheus-alert-firing.png": {
+      "dimensions": [
+        1366,
+        768
+      ],
+      "sha256": "e0bee663ec8631fffe02a547def903cedba4e2ee16b03035ecfdcdc5660e6f82",
+      "actual_format": "PNG"
+    }
+  },
+  "trace_log": [
+    {
+      "trace_id": "f97793940f004263c4db7441e264b065",
+      "duration_ms": 3183.52,
+      "log_ms": 3096.5,
+      "status": 200
+    },
+    {
+      "trace_id": "c34cb9ba78a06c551110b3357b8eac11",
+      "duration_ms": 97.943,
+      "log_ms": 96.5,
+      "status": 503
+    }
+  ],
+  "scope": "Saved artifacts and guarded consistency checks; rubric points require Lab Coach review"
+}
